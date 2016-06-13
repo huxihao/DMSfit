@@ -19,19 +19,19 @@ Use protein docking to predict binding interfaces
          - ROCR
     * A work path with 10G free spaces, here we use ./work as an example
     
--> Please download the full PARS data set from "PARS_DATA_SET.rar (14.2M)" at
+. Please download the full PARS data set from "PARS_DATA_SET.rar (14.2M)" at
 
     http://yiplab.cse.cuhk.edu.hk/probrna/
 
  and then uncompress it to the work folder.
 
--> Test the functions of basic modules
+. Test the functions of basic modules
 
 	python src/fit_pars.py WorkPath=work Action=test
 	python src/learn_domain.py WorkPath=work Action=test
 	python src/validate_kim.py WorkPath=work Action=test
 
--> If running the above commands is successful from your shell, you can use the
+. If running the above commands is successful from your shell, you can use the
  "Produce.sh" script to get some results with a small range of parameters:
 
 	sh Produce.sh all &> log.txt &
@@ -59,10 +59,10 @@ Use protein docking to predict binding interfaces
 -> You may need further change the parameters defined in the head of Produce.sh 
  to suggested values to reproduce *all* the results in mentioned paper:
  
-#!/bin/sh
-TH=8     # number of threads (suggest 8)
-MK=20    # maximum of K, fitting window size (suggest 20)
-MW=200   # maximum of w, scanning window size (suggest 200)
+  #!/bin/sh
+  TH=8     # number of threads (suggest 8)
+  MK=20    # maximum of K, fitting window size (suggest 20)
+  MW=200   # maximum of w, scanning window size (suggest 200)
 
  Then, run again by: sh Produce.sh all &> log.txt &
  
